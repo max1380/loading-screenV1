@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="sky">
+<audio id="loading" autoplay loop>
+    <source src="https://cloud.xlife.fr/music/loading.mp3" type="audio/mp3">
+</audio>
+<div class="background">
+    <div class="img-center">
+        <img src="img/logo.png" width="900">
+    </div>
+</div>
+<script src="js/script.js"></script>
+<script>
+    var play = false;
+            var vid = document.getElementById("loading");
+            vid.volume = 0.3;
+            window.addEventListener('keyup', function(e)
+            {
+                if (e.which == 69){
+                    vid.volume = Math.min(vid.volume + 0.1,1);
+                } else if(e.which == 65){
+                    vid.volume = Math.max(vid.volume - 0.1,0);
+                };
+            });
+  </script>
+</body>
+</html>
